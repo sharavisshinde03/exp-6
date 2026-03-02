@@ -2,34 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sharavi Shinde - Resume</title>
+    <title>Sharavi Shinde | Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        h2 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            color: #3498db;
-        }
-        ul {
+        * {
             margin: 0;
-            padding-left: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
-        .section {
-            margin-bottom: 20px;
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2, #ff6ec4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            color: white;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            backdrop-filter: blur(18px);
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ffffff, #ffd6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 18px;
+            padding: 22px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .full {
+            grid-column: span 2;
+        }
+
+        .project {
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            margin: 3px;
+        }
+
+        .contact p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: span 1;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
@@ -37,84 +132,88 @@
 
 <div class="container">
 
-    <h1>Sharavi Shinde</h1>
-    <p><strong>Email:</strong> your-email@example.com</p>
-    <p><strong>Location:</strong> Mumbai, India</p>
-    <p><strong>GitHub:</strong> github.com/yourusername</p>
-
-    <div class="section">
-        <h2>Career Objective</h2>
-        <p>
-            Enthusiastic Computer Science student with hands-on experience in Django, Flask,
-            Big Data technologies, and Machine Learning. Passionate about building scalable
-            applications and data-driven systems.
-        </p>
+    <div class="header">
+        <h1>Sharavi Shinde</h1>
+        <div class="subtitle">Second Year B.Tech | AI & Web Developer</div>
     </div>
 
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> Python, Java, SQL</li>
-            <li><strong>Web Development:</strong> Django, Flask, HTML, CSS</li>
-            <li><strong>Machine Learning:</strong> Gradient Boosting, Predictive Modeling</li>
-            <li><strong>Big Data:</strong> Hadoop, HDFS, MapReduce</li>
-            <li><strong>Tools:</strong> Git, Docker, Jenkins, Eclipse, VS Code</li>
-            <li><strong>Operating System:</strong> macOS (M3/M4), Linux basics</li>
-        </ul>
-    </div>
+    <div class="grid">
 
-    <div class="section">
-        <h2>Projects</h2>
+        <!-- Profile -->
+        <div class="card full">
+            <h2>Personal Profile</h2>
+            <p>
+                Motivated SYBTech student with strong foundation in programming, data structures,
+                and problem-solving. Skilled in Python, Flask, Django, and Machine Learning.
+                Passionate about building real-world technical solutions and gaining industry experience.
+            </p>
+        </div>
 
-        <h3>Car Price Predictor (Django + ML)</h3>
-        <ul>
-            <li>Built a Django web application to predict used car prices.</li>
-            <li>Integrated machine learning model with backend.</li>
-            <li>Implemented user authentication and Add-to-Cart functionality.</li>
-        </ul>
+        <!-- Contact -->
+        <div class="card contact">
+            <h2>Contact</h2>
+            <p>📞 8850879867</p>
+            <p>📧 sharavisshinde03@gmail.com</p>
+            <p>📍 Mumbai, India</p>
+            <p>🔗 LinkedIn: Sharavi Shinde</p>
+            <p>💻 GitHub: GitHub_Sharavi</p>
+        </div>
 
-        <h3>Weather Forecast App (Flask + OpenWeather API)</h3>
-        <ul>
-            <li>Developed a Flask-based weather forecasting web app.</li>
-            <li>Integrated OpenWeather API for real-time city-based forecasts.</li>
-            <li>Designed Glass UI frontend in a single Python file.</li>
-        </ul>
+        <!-- Skills -->
+        <div class="card">
+            <h2>Skills</h2>
+            <div class="tag">Python</div>
+            <div class="tag">Flask</div>
+            <div class="tag">Django</div>
+            <div class="tag">HTML/CSS</div>
+            <div class="tag">JavaScript</div>
+            <div class="tag">Machine Learning</div>
+            <div class="tag">Flutter</div>
+            <div class="tag">PostgreSQL</div>
+            <div class="tag">MongoDB</div>
+            <div class="tag">Linux</div>
+        </div>
 
-        <h3>Student Performance Big Data Analysis</h3>
-        <ul>
-            <li>Processed large CSV datasets using Hadoop HDFS.</li>
-            <li>Implemented MapReduce for data analysis.</li>
-            <li>Performed predictive analytics on student performance data.</li>
-        </ul>
+        <!-- Education -->
+        <div class="card">
+            <h2>Education</h2>
+            <p><strong>B.Tech</strong> — Atlas Skilltech University</p>
+            <p>Duration: July 2024 – June 2028</p>
+            <br>
+            <p><strong>HSC</strong> — Maharashtra State Board</p>
+            <p>June 2022 – June 2024</p>
+        </div>
 
-    </div>
+        <!-- Projects -->
+        <div class="card full">
+            <h2>Projects</h2>
 
-    <div class="section">
-        <h2>Big Data Experience</h2>
-        <ul>
-            <li>Worked with HDFS commands (mkdir, put, ls, rmdir).</li>
-            <li>Executed MapReduce Word Count using Hadoop.</li>
-            <li>Handled large dataset uploads and URI troubleshooting.</li>
-        </ul>
-    </div>
+            <div class="project">
+                <strong>Library Management System</strong><br>
+                Responsive web app for managing books, login, cart and purchase history.<br>
+                <small>Tools: Python, Django, HTML, CSS, MySQL</small>
+            </div>
 
-    <div class="section">
-        <h2>Certifications / Learning</h2>
-        <ul>
-            <li>Machine Learning Fundamentals</li>
-            <li>Big Data & Hadoop Basics</li>
-            <li>Java Development & OOP Concepts</li>
-        </ul>
-    </div>
+            <div class="project">
+                <strong>Finance Budgeting & Tracking Website</strong><br>
+                Expense tracking app with categorized analytics and real-time tracking.<br>
+                <small>Tools: Flask/Django, JavaScript, MySQL</small>
+            </div>
 
-    <div class="section">
-        <h2>Soft Skills</h2>
-        <ul>
-            <li>Problem Solving</li>
-            <li>Analytical Thinking</li>
-            <li>Fast Learner</li>
-            <li>Strong Debugging Skills</li>
-        </ul>
+            <div class="project">
+                <strong>Car Price Predictor</strong><br>
+                ML-based Django web app predicting resale value of cars.<br>
+                <small>Tools: Django, Machine Learning</small>
+            </div>
+
+            <div class="project">
+                <strong>Space Debris Collision Risk Classifier</strong><br>
+                ML app classifying collision risk using CSV space-object data.<br>
+                <small>Tools: Python, Scikit-learn, Streamlit</small>
+            </div>
+
+        </div>
+
     </div>
 
 </div>
