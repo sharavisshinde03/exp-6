@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return "<h1>Sharavi Shinde</h1><br><h2>App ID: 2410915</h2>"
 
-@app.route('/resume')
+@app.route("/resume")
 def resume():
     return render_template("resume.html")
 
